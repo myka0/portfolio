@@ -1,0 +1,10 @@
+.position {
+  position: fixed;
+  bottom: var(--static-space-24);
+}
+
+@media (max-width: 1200px) {
+  .position {
+    position: static;
+  }
+}
