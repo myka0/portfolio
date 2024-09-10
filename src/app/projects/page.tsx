@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   Heading,
   Text,
@@ -11,6 +11,7 @@ import {
   SmartImage,
   Background,
   Icon,
+  Tag,
 } from "@/once-ui/components";
 import Link from "next/link";
 
@@ -21,8 +22,9 @@ const projects = [
     techStack: ["Vue.js", "Nuxt3", "TypeScript", "Prisma", "MongoDB"],
     href: "/projects/umbra-writer",
     github: "https://github.com/myka0/umbra-writer",
-    img: "",
+    img: "/images/umbra-writer.png",
     alt: "Umbra Writer",
+    status: "In Progress",
   },
   {
     title: "Wetpaint Lang",
@@ -33,10 +35,37 @@ const projects = [
     github: "https://github.com/myka0/wetpaint",
     img: "/images/wetpaint.svg",
     alt: "Wetpaint Programming Langauge Example",
+    status: "Completed",
   },
 ];
 
+const StatusBadge = ({ status }) => {
+  if (status === "Completed") {
+    return <Tag variant="success" size="l" label={status}></Tag>;
+  } else {
+    return <Tag variant="warning" size="l" label={status}></Tag>;
+  }
+};
+
 export default function Projects() {
+  const [maxWidth, setMaxWidth] = useState(48);
+
+  useEffect(() => {
+    const updateMaxWidth = () => {
+      if (window.innerWidth <= 768) {
+        setMaxWidth(40);
+      } else {
+        setMaxWidth(48);
+      }
+    };
+
+    updateMaxWidth();
+
+    window.addEventListener("resize", updateMaxWidth);
+
+    return () => window.removeEventListener("resize", updateMaxWidth);
+  }, []);
+
   return (
     <Flex
       fillWidth
@@ -54,7 +83,7 @@ export default function Projects() {
         overflow="hidden"
         fillWidth
         minHeight="0"
-        maxWidth={48}
+        maxWidth={maxWidth}
         direction="column"
         alignItems="center"
         flex={1}
@@ -62,16 +91,15 @@ export default function Projects() {
         <Flex
           as="section"
           direction="column"
-          alignItems="center"
           fillWidth
-          maxWidth={64}
+          marginLeft="64"
           paddingY="l"
-          gap="l"
+          gap="s"
         >
-          <Heading variant="display-strong-s">Projects</Heading>
+          <Heading variant="display-strong-s">Personal Projects</Heading>
           <Text variant="body-default-s" onBackground="neutral-weak">
-            A showcase of my projects, exploring web development, programming
-            languages, and more.
+            A showcase of my projects, exploring web development and programming
+            language design.
           </Text>
         </Flex>
 
@@ -81,7 +109,7 @@ export default function Projects() {
           mobileColumns="1col"
           gap="l"
           fillWidth
-          maxWidth={48}
+          maxWidth={maxWidth}
           paddingX="l"
         >
           {projects.map((project, index) => (
@@ -108,59 +136,33 @@ export default function Projects() {
                 </Flex>
               </Link>
 
-              <Flex alignItems="center" gap="m">
-                <InlineCode
-                  className="shadow-m"
-                  style={{
-                    width: "fit-content",
-                    padding: "var(--static-space-8) var(--static-space-16)",
-                  }}
-                >
-                  {project.techStack.join(" | ")}
-                </InlineCode>
-                <Link href={project.github} target="_blank">
-                  <Icon name="github" size="l" />
-                </Link>
+              <Flex alignItems="center" gap="m" justifyContent="space-between">
+                <Flex alignItems="center" gap="m">
+                  <InlineCode
+                    className="shadow-m"
+                    style={{
+                      width: "fit-content",
+                      padding: "var(--static-space-8) var(--static-space-16)",
+                    }}
+                  >
+                    {project.techStack.join(" | ")}
+                  </InlineCode>
+                  <Link href={project.github} target="_blank">
+                    <Icon name="github" size="l" />
+                  </Link>
+                </Flex>
+                <StatusBadge status={project.status} />
               </Flex>
 
               <SmartImage
                 src={project.img}
                 alt={project.alt}
-                aspectRatio="10/9"
+                aspectRatio="8/7"
                 radius="m"
-                objectFit="cover"
               />
             </Flex>
           ))}
         </Grid>
-
-        <Flex
-          as="footer"
-          position="relative"
-          fillWidth
-          paddingX="l"
-          paddingY="m"
-          justifyContent="right"
-        >
-          <Flex gap="12">
-            <Button
-              href="https://github.com/myka0"
-              prefixIcon="github"
-              size="s"
-              variant="tertiary"
-            >
-              GitHub
-            </Button>
-            <Button
-              href="mailto:mykamayer@gmail.com"
-              prefixIcon="person"
-              size="s"
-              variant="tertiary"
-            >
-              mykamayer0@gmail.com
-            </Button>
-          </Flex>
-        </Flex>
       </Flex>
     </Flex>
   );

@@ -53,7 +53,7 @@ type CustomLinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 function CustomLink({ href, children, ...props }: CustomLinkProps) {
   if (href.startsWith("/")) {
     return (
-      <SmartLink href={href} {...props}>
+      <SmartLink href={href} {...props} style={{ display: "block" }}>
         {children}
       </SmartLink>
     );
@@ -89,7 +89,7 @@ function createImage({
       className="my-20"
       enlarge
       radius="m"
-      aspectRatio="10/9"
+      aspectRatio="8/7"
       alt={alt}
       src={src}
       {...props}
@@ -102,6 +102,7 @@ function createHeading(
   size:
     | "display-strong-m"
     | "display-strong-s"
+    | "heading-strong-xl"
     | "heading-strong-l"
     | "heading-strong-m",
 ) {
@@ -210,8 +211,8 @@ const components = {
   p: createParagraph as any,
   h1: createHeading("h1", "display-strong-m") as any,
   h2: createHeading("h2", "display-strong-s") as any,
-  h3: createHeading("h3", "heading-strong-l") as any,
-  h4: createHeading("h4", "heading-strong-l") as any,
+  h3: createHeading("h3", "heading-strong-xl") as any,
+  h4: createHeading("h4", "heading-strong-m") as any,
   h5: createHeading("h5", "heading-strong-m") as any,
   h6: createHeading("h6", "heading-strong-m") as any,
   img: createImage as any,
@@ -225,18 +226,13 @@ const components = {
   li: ({ children }: { children: ReactNode }) => (
     <li style={{ marginBottom: "10px" }}>{children}</li>
   ),
-  /* pre: ({ children }: { children: ReactNode }) => (
-        <pre style={customCodeBlockStyle}>
-            <code>{children}</code>
-        </pre>
-    ), */
 };
 
 type CustomMDXProps = MDXRemoteProps & {
   components?: typeof components;
 };
 
-export function CustomMDX(props: CustomMDXProps) {
+export function CustomMDX(props: CustomMDXProps, imgApectRatio: string) {
   return (
     <MDXRemote
       {...props}
