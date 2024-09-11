@@ -39,7 +39,11 @@ const projects = [
   },
 ];
 
-const StatusBadge = ({ status }) => {
+interface StatusBadgeProps {
+  status: string;
+}
+
+const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
   if (status === "Completed") {
     return <Tag variant="success" size="l" label={status}></Tag>;
   } else {

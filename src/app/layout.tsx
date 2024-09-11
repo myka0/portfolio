@@ -10,7 +10,7 @@ import { Source_Code_Pro } from "next/font/google";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
-export const metadata: Metadata = {
+export const metadata = {
   metadataBase: new URL("https://mykamayer.com"),
   title: "Myka Mayer",
   openGraph: {

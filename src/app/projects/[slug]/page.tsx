@@ -41,7 +41,11 @@ export default async function ProjectPage({
   const rawContent = fs.readFileSync(filePath, "utf-8");
   const { data: frontmatter, content } = matter(rawContent);
 
-  const StatusBadge = ({ status }) => {
+  interface StatusBadgeProps {
+    status: string;
+  }
+
+  const StatusBadge: React.FC<StatusBadgeProps> = ({ status }) => {
     if (status === "Completed") {
       return <Tag variant="success" size="l" label={status}></Tag>;
     } else {

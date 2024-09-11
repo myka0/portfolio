@@ -3,19 +3,6 @@
     { "name": "GitHub", "icon": "github", "link": "https://github.com/myka0" },
     { "name": "Email", "icon": "email", "link": "mailto:mykamayer0@gmail.com" }
   ],
-  "structure": [
-    "Introduction",
-    { "Education": ["University of Oklahoma"] },
-    { "Personal Projects": ["Umbra Writer", "Wetpaint"] },
-    {
-      "Technical Skills": [
-        "Languages",
-        "Web Technologies",
-        "Databases & ORMs",
-        "Tools"
-      ]
-    }
-  ],
   "about": {
     "label": "About",
     "title": "About me",
