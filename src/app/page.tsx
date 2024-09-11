@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import styles from "@/app/page.module.scss";
 
 import {
   Heading,
@@ -65,7 +66,7 @@ export default function Home() {
           padding="l"
           gap="l"
         >
-          <Flex mobileDirection="row" fillWidth gap="24">
+          <Flex mobileDirection="column" fillWidth gap="24">
             <Flex
               position="relative"
               fillWidth
@@ -73,13 +74,18 @@ export default function Home() {
               paddingX="xl"
               style={{ top: "-8px" }}
             >
-              <Logo size="xl" icon={false} style={{ zIndex: "1" }} />
+              <Logo
+                size="xl"
+                icon={false}
+                style={{ zIndex: "1" }}
+                className={styles.logoHiddenOnMobile}
+              />
             </Flex>
             <Flex
               position="relative"
               fillWidth
               gap="24"
-              marginBottom="104"
+              marginBottom="16"
               direction="column"
             >
               <Heading variant="display-strong-s">

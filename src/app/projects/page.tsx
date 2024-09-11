@@ -19,7 +19,7 @@ const projects = [
   {
     title: "Umbra Writer",
     description: "Real-time web-based rich text editor built with Nuxt3.",
-    techStack: ["Vue.js", "Nuxt3", "TypeScript", "Prisma", "MongoDB"],
+    techStack: ["Nuxt3", "Vue.js", "TypeScript", "Prisma", "MongoDB"],
     href: "/projects/umbra-writer",
     github: "https://github.com/myka0/umbra-writer",
     img: "/images/umbra-writer.png",
@@ -93,7 +93,7 @@ export default function Projects() {
           direction="column"
           fillWidth
           marginLeft="64"
-          paddingY="l"
+          paddingY="m"
           gap="s"
         >
           <Heading variant="display-strong-s">Personal Projects</Heading>
@@ -116,27 +116,36 @@ export default function Projects() {
             <Flex
               key={index}
               direction="column"
-              gap="m"
+              gap="8"
               padding="l"
               border="neutral-medium"
               borderStyle="solid-1"
               radius="m"
-              style={{ boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
+              style={{
+                backdropFilter: "blur(var(--static-space-1))",
+                border: "1px solid var(--brand-alpha-medium)",
+              }}
+              alpha="neutral-weak"
             >
               <Link href={project.href}>
                 <Flex direction="column">
-                  <Flex fillWidth paddingY="8" gap="12" alignItems="center">
+                  <Flex fillWidth paddingY="4" gap="8" alignItems="center">
                     <Heading>{project.title}</Heading>
                     <Icon size="s" name="arrowUpRight" />
                   </Flex>
 
-                  <Text variant="body-default-m" onBackground="neutral-weak">
+                  <Text variant="body-default-m" onBackground="brand-weak">
                     {project.description}
                   </Text>
                 </Flex>
               </Link>
 
-              <Flex alignItems="center" gap="m" justifyContent="space-between">
+              <Flex
+                alignItems="center"
+                gap="m"
+                marginBottom="8"
+                justifyContent="space-between"
+              >
                 <Flex alignItems="center" gap="m">
                   <InlineCode
                     className="shadow-m"
@@ -155,9 +164,10 @@ export default function Projects() {
               </Flex>
 
               <SmartImage
+                enlarge
                 src={project.img}
                 alt={project.alt}
-                aspectRatio="8/7"
+                aspectRatio="7/6"
                 radius="m"
               />
             </Flex>

@@ -10,6 +10,30 @@ import { Source_Code_Pro } from "next/font/google";
 import "prismjs/themes/prism-tomorrow.css";
 import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
+export const metadata: Metadata = {
+  metadataBase: new URL("https://mykamayer.com"),
+  title: "Myka Mayer",
+  openGraph: {
+    title: `Myka Mayer's Portfolio`,
+    description: "Portfolio website showcasing my work.",
+    url: "https://mykamayer.com",
+    siteName: `Myka Mayer's Portfolio`,
+    locale: "en_US",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
 const primary = Inter({
   variable: "--font-primary",
   subsets: ["latin"],

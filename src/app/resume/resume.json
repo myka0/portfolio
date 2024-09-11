@@ -1,0 +1,96 @@
+{
+  "social": [
+    { "name": "GitHub", "icon": "github", "link": "https://github.com/myka0" },
+    { "name": "Email", "icon": "email", "link": "mailto:mykamayer0@gmail.com" }
+  ],
+  "structure": [
+    "Introduction",
+    { "Education": ["University of Oklahoma"] },
+    { "Personal Projects": ["Umbra Writer", "Wetpaint"] },
+    {
+      "Technical Skills": [
+        "Languages",
+        "Web Technologies",
+        "Databases & ORMs",
+        "Tools"
+      ]
+    }
+  ],
+  "about": {
+    "label": "About",
+    "title": "About me",
+    "description": "Meet Myka Mayer, Software Engineer from Oklahoma",
+    "intro": {
+      "title": "Introduction",
+      "description": "I'm Myka Mayer, a Computer Science student at the University of Oklahoma with a passion for all kinds of development. With experience in web development, programming language design, and database management, I enjoy creating functional, scalable applications using modern technologies."
+    },
+    "projects": {
+      "title": "Personal Projects",
+      "project": [
+        {
+          "title": "Umbra Writer",
+          "github": "https://github.com/myka0/umbra-writer",
+          "status": "In Progress",
+          "techStack": ["Nuxt3", "Vue.js", "TypeScript", "Prisma", "MongoDB"],
+          "href": "/projects/umbra-writer",
+          "description": "Real-time Web-Based Rich Text Editor",
+          "achievements": [
+            "Developed a web-based rich text editor using Nuxt3, Vue.js, and TypeScript, supporting a variety of rich text editing features, including bold, italics, heading levels, and structured elements like code blocks and quotes.",
+            "Integrated Prisma ORM with MongoDB for scalable and efficient document storage.",
+            "Created a user authentication system using NuxtAuth, with sign-in and sign-up functionalities.",
+            "Developed a file manager that allows users to create, rename, and delete documents, with autosave functionality to prevent data loss.",
+            "Upcoming features include real-time collaboration, image embedding, and document export in PDF, Word, and Markdown formats."
+          ]
+        },
+        {
+          "title": "Wetpaint",
+          "github": "https://github.com/myka0/wetpaint",
+          "status": "Completed",
+          "techStack": ["C++20", "CMake"],
+          "href": "/projects/wetpaint",
+          "description": "Dynamically Typed and Interpreted Programming Language",
+          "achievements": [
+            "Designed and implemented a dynamically typed and interpreted programming language, using C++ for educational purposes and language design experimentation.",
+            "Built a Lexer and Parser to tokenize and construct an Abstract Syntax Tree, enabling source code analysis and validation.",
+            "Engineered a runtime interpreter that traverses the AST, executing the program and managing variable scope through an environment system.",
+            "Successfully implemented core language features such as function declarations, conditional logic, and loops, allowing users to build functional programs.",
+            "Created and documented example programs, including a FizzBuzz implementation, demonstrating the language's capabilities."
+          ]
+        }
+      ]
+    },
+    "studies": {
+      "title": "Education",
+      "institutions": [
+        {
+          "name": "University of Oklahoma",
+          "description": "Studying Computer Science.",
+          "graduation": "December, 2025",
+          "achievements": ["Valedictorian Scholarship Recipient", "3.78 GPA"],
+          "coursework": [
+            "Theory of Computation",
+            "Software Engineering",
+            "Principles of Programming Languages",
+            "Data Structures",
+            "Artificial Intelligence"
+          ]
+        }
+      ]
+    },
+    "technical": {
+      "title": "Technical Skills",
+      "skills": [
+        { "title": "Languages", "skills": ["C++", "Java", "TypeScript", "R"] },
+        {
+          "title": "Web Technologies",
+          "skills": ["Nuxt3", "Vue.js", "NextJS", "React"]
+        },
+        {
+          "title": "Databases & ORMs",
+          "skills": ["MongoDB", "MySQL", "Prisma"]
+        },
+        { "title": "Tools", "skills": ["Git", "LaTex", "Linux", "Nix"] }
+      ]
+    }
+  }
+}

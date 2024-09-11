@@ -10,7 +10,7 @@ import {
   Icon,
   Tag,
 } from "@/once-ui/components";
-import TableOfContents from "@/app/projects/components/TableOfContents";
+import TableOfContents from "@/app/components/TableOfContents";
 import Link from "next/link";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
@@ -67,10 +67,10 @@ export default async function ProjectPage({
         alignItems="center"
         fillWidth
         maxWidth={32}
-        paddingY="l"
-        gap="l"
+        paddingTop="l"
+        gap="m"
       >
-        <Flex as="article" direction="column" gap="16" fillWidth>
+        <Flex as="article" direction="column" gap="8" fillWidth>
           <Heading variant="display-strong-l">{frontmatter.title}</Heading>
 
           <Flex alignItems="center" gap="m">

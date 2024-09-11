@@ -89,7 +89,7 @@ function createImage({
       className="my-20"
       enlarge
       radius="m"
-      aspectRatio="8/7"
+      aspectRatio="7/6"
       alt={alt}
       src={src}
       {...props}
@@ -112,8 +112,7 @@ function createHeading(
         id={children?.toString()}
         variant={size}
         style={{
-          marginTop: "var(--static-space-24)",
-          marginBottom: "var(--static-space-12)",
+          marginTop: "var(--static-space-12)",
         }}
         as={level}
       >
@@ -149,7 +148,7 @@ function createList({ children }: { children: ReactNode }) {
         listStyleType: "disc",
         lineHeight: "150%",
         textIndent: "-14px",
-        paddingInlineStart: "40px",
+        paddingInlineStart: "32px",
       }}
     >
       {children}
@@ -165,7 +164,7 @@ function createOrderedList({ children }: { children: ReactNode }) {
         listStyleType: "disc",
         lineHeight: "150%",
         textIndent: "-14px",
-        paddingInlineStart: "40px",
+        paddingInlineStart: "32px",
       }}
     >
       {children}
@@ -190,7 +189,7 @@ const codeBlockStyle: CSSProperties = {
   border: "1px solid var(--function-neutral-300)",
   padding: "16px",
   borderRadius: "16px",
-  fontFamily: "monospace",
+  fontFamily: '"Source Code Pro", monospace',
   lineHeight: "150%",
   overflowX: "auto",
   textIndent: "-4px",
