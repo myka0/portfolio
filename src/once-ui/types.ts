@@ -16,7 +16,8 @@ export type StaticSpacingToken =
   | "80"
   | "104"
   | "128"
-  | "160";
+  | "160"
+  | "224";
 
 export type TShirtSizes = "xs" | "s" | "m" | "l" | "xl";
 
