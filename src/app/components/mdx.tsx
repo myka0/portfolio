@@ -206,6 +206,16 @@ function createCodeBlock({ children }: { children: ReactNode }) {
   );
 }
 
+type CustomLiProps = React.LiHTMLAttributes<HTMLLIElement> & {
+  children: ReactNode;
+};
+
+const CreateListElement = ({ children, ...props }: CustomLiProps) => (
+  <li {...props} style={{ marginBottom: "10px" }}>
+    {children}
+  </li>
+);
+
 const components = {
   p: createParagraph as any,
   h1: createHeading("h1", "display-strong-m") as any,
@@ -220,18 +230,15 @@ const components = {
   ol: createOrderedList as any,
   code: createInlineCode as any,
   pre: createCodeBlock as any,
+  li: CreateListElement as any,
   Table,
-
-  li: ({ children }: { children: ReactNode }) => (
-    <li style={{ marginBottom: "10px" }}>{children}</li>
-  ),
 };
 
 type CustomMDXProps = MDXRemoteProps & {
   components?: typeof components;
 };
 
-export function CustomMDX(props: CustomMDXProps, imgApectRatio: string) {
+export function CustomMDX(props: CustomMDXProps) {
   return (
     <MDXRemote
       {...props}
