@@ -19,6 +19,8 @@
           "github": "https://github.com/myka0/umbra-writer",
           "status": "In Progress",
           "techStack": ["Nuxt3", "Vue.js", "TypeScript", "Prisma", "MongoDB"],
+          "demo": "https://www.umbrawriter.com/",
+          "demoDisplay": true,
           "href": "/projects/umbra-writer",
           "description": "Real-time Web-Based Rich Text Editor",
           "achievements": [
@@ -34,6 +36,7 @@
           "github": "https://github.com/myka0/wetpaint",
           "status": "Completed",
           "techStack": ["C++20", "CMake"],
+          "demoDisplay": false,
           "href": "/projects/wetpaint",
           "description": "Dynamically Typed and Interpreted Programming Language",
           "achievements": [

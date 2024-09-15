@@ -311,7 +311,7 @@ export default function Resume() {
                     alignItems="center"
                     gap="s"
                     justifyContent="space-between"
-                    marginBottom="m"
+                    marginBottom="s"
                   >
                     <Flex alignItems="center" gap="s">
                       <InlineCode
@@ -330,6 +330,16 @@ export default function Resume() {
                     </Flex>
                     <StatusBadge status={project.status} />
                   </Flex>
+
+                  {project.demoDisplay && (
+                  <Flex marginBottom="s">
+                    <Link href={project.demo} target="_blank">
+                      <Text variant="body-default-m" onBackground="brand-weak" marginBottom="8">
+                        View Demo
+                      </Text>
+                    </Link>
+                  </Flex>
+                  )}
 
                   <Flex
                     as="ul"
