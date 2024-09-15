@@ -36,6 +36,7 @@
           "github": "https://github.com/myka0/wetpaint",
           "status": "Completed",
           "techStack": ["C++20", "CMake"],
+          "demo": "",
           "demoDisplay": false,
           "href": "/projects/wetpaint",
           "description": "Dynamically Typed and Interpreted Programming Language",
