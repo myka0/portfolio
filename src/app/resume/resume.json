@@ -88,7 +88,10 @@
     "technical": {
       "title": "Technical Skills",
       "skills": [
-        { "title": "Languages", "skills": ["C/C++", "Java", "TypeScript", "Python"] },
+        {
+          "title": "Languages",
+          "skills": ["C/C++", "Java", "TypeScript", "Python"]
+        },
         {
           "title": "Web Technologies",
           "skills": ["Nuxt3", "Vue.js", "Next.js", "React.js"]

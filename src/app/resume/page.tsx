@@ -52,8 +52,8 @@ export default function Resume() {
   const structure: StructureItem[] = [
     "Introduction",
     { Education: ["University of Oklahoma"] },
-    { "Experience": ["Caldarra"] },
-    { "Projects": ["Umbra Writer", "Wetpaint"] },
+    { Experience: ["Caldarra"] },
+    { Projects: ["Umbra Writer", "Wetpaint"] },
     {
       "Technical Skills": [
         "Languages",
@@ -337,7 +337,7 @@ export default function Resume() {
                       <Text
                         as="li"
                         variant="body-default-m"
-                        key={`${job.name}-${index}`}
+                        key={`${job.title}-${index}`}
                       >
                         {achievement}
                       </Text>
@@ -410,13 +410,17 @@ export default function Resume() {
                   </Flex>
 
                   {project.demoDisplay && (
-                  <Flex marginBottom="s">
-                    <Link href={project.demo} target="_blank">
-                      <Text variant="body-default-m" onBackground="brand-weak" marginBottom="8">
-                        View Demo
-                      </Text>
-                    </Link>
-                  </Flex>
+                    <Flex marginBottom="s">
+                      <Link href={project.demo} target="_blank">
+                        <Text
+                          variant="body-default-m"
+                          onBackground="brand-weak"
+                          marginBottom="8"
+                        >
+                          View Demo
+                        </Text>
+                      </Link>
+                    </Flex>
                   )}
 
                   <Flex
