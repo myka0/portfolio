@@ -52,7 +52,8 @@ export default function Resume() {
   const structure: StructureItem[] = [
     "Introduction",
     { Education: ["University of Oklahoma"] },
-    { "Personal Projects": ["Umbra Writer", "Wetpaint"] },
+    { "Experience": ["Caldarra"] },
+    { "Projects": ["Umbra Writer", "Wetpaint"] },
     {
       "Technical Skills": [
         "Languages",
@@ -218,34 +219,39 @@ export default function Resume() {
                       {institution.graduation}
                     </Text>
                   </Flex>
-                  <Text
-                    variant="body-default-m"
-                    onBackground="brand-weak"
-                    marginBottom="8"
-                  >
-                    {institution.description}
-                  </Text>
+
                   <Flex
-                    as="ul"
-                    direction="column"
-                    gap="8"
-                    marginBottom="16"
-                    style={{ paddingInlineStart: "24px", textIndent: "-14px" }}
+                    fillWidth
+                    justifyContent="space-between"
+                    alignItems="flex-end"
                   >
-                    {institution.achievements.map((achievement, index) => (
-                      <Text
-                        as="li"
-                        variant="body-default-m"
-                        key={`${institution.name}-${index}`}
-                      >
-                        {achievement}
-                      </Text>
-                    ))}
+                    <Text
+                      variant="body-default-m"
+                      onBackground="brand-weak"
+                      marginBottom="0"
+                    >
+                      {institution.major}
+                    </Text>
+                    <Text
+                      variant="heading-default-xs"
+                      onBackground="neutral-weak"
+                      marginBottom="4"
+                    >
+                      {institution.gpa}
+                    </Text>
                   </Flex>
                   <Text
                     variant="body-default-m"
                     onBackground="brand-weak"
                     marginBottom="8"
+                  >
+                    {institution.minor}
+                  </Text>
+                  <Text
+                    variant="body-default-l"
+                    onBackground="neutral-strong"
+                    marginBottom="8"
+                    weight="strong"
                   >
                     Relevant Coursework:
                   </Text>
@@ -262,6 +268,78 @@ export default function Resume() {
                         key={`${institution.name}-${index}`}
                       >
                         {coursework}
+                      </Text>
+                    ))}
+                  </Flex>
+                </Flex>
+              ))}
+            </Flex>
+
+            <Heading
+              as="h2"
+              id={about.work.title}
+              variant="display-strong-s"
+              marginBottom="m"
+            >
+              {about.work.title}
+            </Heading>
+            <Flex direction="column" fillWidth gap="l" marginBottom="40">
+              {about.work.jobs.map((job, index) => (
+                <Flex
+                  key={`${job.title}-${index}`}
+                  fillWidth
+                  gap="4"
+                  direction="column"
+                >
+                  <Flex
+                    fillWidth
+                    justifyContent="space-between"
+                    alignItems="flex-end"
+                  >
+                    <Text id={job.title} variant="heading-strong-l">
+                      {job.title}
+                    </Text>
+                    <Text
+                      variant="heading-default-xs"
+                      onBackground="neutral-weak"
+                    >
+                      {job.date}
+                    </Text>
+                  </Flex>
+                  <Flex
+                    fillWidth
+                    justifyContent="space-between"
+                    alignItems="flex-end"
+                  >
+                    <Text
+                      variant="body-default-m"
+                      onBackground="brand-weak"
+                      marginBottom="8"
+                    >
+                      {job.description}
+                    </Text>
+                    <Text
+                      variant="heading-default-xs"
+                      onBackground="neutral-weak"
+                      marginBottom="8"
+                    >
+                      {job.location}
+                    </Text>
+                  </Flex>
+                  <Flex
+                    as="ul"
+                    direction="column"
+                    gap="8"
+                    marginBottom="16"
+                    style={{ paddingInlineStart: "24px", textIndent: "-14px" }}
+                  >
+                    {job.achievements.map((achievement, index) => (
+                      <Text
+                        as="li"
+                        variant="body-default-m"
+                        key={`${job.name}-${index}`}
+                      >
+                        {achievement}
                       </Text>
                     ))}
                   </Flex>

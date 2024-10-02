@@ -66,21 +66,7 @@ export default function Home() {
           padding="l"
           gap="l"
         >
-          <Flex mobileDirection="column" fillWidth gap="24">
-            <Flex
-              position="relative"
-              fillWidth
-              paddingTop="0"
-              paddingX="xl"
-              style={{ top: "-8px" }}
-            >
-              <Logo
-                size="xl"
-                icon={false}
-                style={{ zIndex: "1" }}
-                className={styles.logoHiddenOnMobile}
-              />
-            </Flex>
+          <Flex mobileDirection="column" fillWidth gap="0">
             <Flex
               position="relative"
               fillWidth
@@ -105,7 +91,7 @@ export default function Home() {
               >
                 Software Engineer |{" "}
                 <span className="brand-on-background-weak">Front End</span> |
-                Web App Developer
+                Web App Dev
               </InlineCode>
               <Button
                 href="/projects"
@@ -114,6 +100,20 @@ export default function Home() {
               >
                 Projects
               </Button>
+            </Flex>
+            <Flex
+              position="relative"
+              paddingTop="0"
+              paddingRight="xl"
+              style={{ top: "-8px" }}
+              justifyContent="flex-end"
+            >
+              <Logo
+                size="xl"
+                icon={false}
+                style={{ zIndex: "1" }}
+                className={styles.logoHiddenOnMobile}
+              />
             </Flex>
           </Flex>
 

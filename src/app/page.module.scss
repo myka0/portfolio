@@ -1,5 +1,9 @@
 .logoHiddenOnMobile {
-  @media (max-width: 768px) {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .logoHiddenOnMobile {
     display: none;
   }
 }

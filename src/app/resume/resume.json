@@ -11,8 +11,25 @@
       "title": "Introduction",
       "description": "I'm Myka Mayer, a Computer Science student at the University of Oklahoma with a passion for all kinds of development. With experience in web development, programming language design, and database management, I enjoy creating functional, scalable applications using modern technologies."
     },
+    "work": {
+      "title": "Experience",
+      "jobs": [
+        {
+          "title": "Caldarra",
+          "description": "Software Engineer Intern",
+          "date": "May - August 2024",
+          "location": "Chicago, IL",
+          "achievements": [
+            "Contributed to front-end development by building responsive user interfaces using React.js, ensuring seamless user experiences across various devices.",
+            "Integrated a NoSQL distributed database into the production environment resulting in an increase in client database performance by over 30%.",
+            "Optimized key React components by refactoring state management and utilizing memoization techniques, reducing page load times by 20% and improving the overall performance of the web application.",
+            "Wrote comprehensive unit and integration tests, achieving 90% test coverage for key components, significantly reducing bugs in production."
+          ]
+        }
+      ]
+    },
     "projects": {
-      "title": "Personal Projects",
+      "title": "Projects",
       "project": [
         {
           "title": "Umbra Writer",
@@ -27,8 +44,7 @@
             "Developed a web-based rich text editor using Nuxt3, Vue.js, and TypeScript, supporting a variety of rich text editing features, including bold, italics, heading levels, and structured elements like code blocks and quotes.",
             "Integrated Prisma ORM with MongoDB for scalable and efficient document storage.",
             "Created a user authentication system using NuxtAuth, with sign-in and sign-up functionalities.",
-            "Developed a file manager that allows users to create, rename, and delete documents, with autosave functionality to prevent data loss.",
-            "Upcoming features include real-time collaboration, image embedding, and document export in PDF, Word, and Markdown formats."
+            "Developed a file manager that allows users to create, rename, and delete documents, with autosave functionality to prevent data loss."
           ]
         },
         {
@@ -44,8 +60,7 @@
             "Designed and implemented a dynamically typed and interpreted programming language, using C++ for educational purposes and language design experimentation.",
             "Built a Lexer and Parser to tokenize and construct an Abstract Syntax Tree, enabling source code analysis and validation.",
             "Engineered a runtime interpreter that traverses the AST, executing the program and managing variable scope through an environment system.",
-            "Successfully implemented core language features such as function declarations, conditional logic, and loops, allowing users to build functional programs.",
-            "Created and documented example programs, including a FizzBuzz implementation, demonstrating the language's capabilities."
+            "Successfully implemented core language features such as function declarations, conditional logic, and loops, allowing users to build functional programs."
           ]
         }
       ]
@@ -55,15 +70,17 @@
       "institutions": [
         {
           "name": "University of Oklahoma",
-          "description": "Studying Computer Science.",
+          "major": "Bachelor of Science: Computer Science",
+          "minor": "Minor: Mathematics",
+          "gpa": "GPA: 3.8/4.0",
           "graduation": "December, 2025",
           "achievements": ["Valedictorian Scholarship Recipient", "3.78 GPA"],
           "coursework": [
             "Theory of Computation",
             "Software Engineering",
-            "Principles of Programming Languages",
-            "Data Structures",
-            "Artificial Intelligence"
+            "Database Management Systems",
+            "Artificial Intelligence",
+            "Data Structures"
           ]
         }
       ]
@@ -71,16 +88,16 @@
     "technical": {
       "title": "Technical Skills",
       "skills": [
-        { "title": "Languages", "skills": ["C++", "Java", "TypeScript", "R"] },
+        { "title": "Languages", "skills": ["C/C++", "Java", "TypeScript", "Python"] },
         {
           "title": "Web Technologies",
-          "skills": ["Nuxt3", "Vue.js", "NextJS", "React"]
+          "skills": ["Nuxt3", "Vue.js", "Next.js", "React.js"]
         },
         {
           "title": "Databases & ORMs",
-          "skills": ["MongoDB", "MySQL", "Prisma"]
+          "skills": ["MongoDB", "MySQL", "PostgreSQL", "Prisma"]
         },
-        { "title": "Tools", "skills": ["Git", "LaTex", "Linux", "Nix"] }
+        { "title": "Tools", "skills": ["Docker", "Figma", "Linux", "Nix"] }
       ]
     }
   }

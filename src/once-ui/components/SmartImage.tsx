@@ -119,6 +119,7 @@ const SmartImage: React.FC<SmartImageProps> = ({
             {...props}
             src={src}
             alt={alt}
+            quality={100}
             fill
             style={{
               objectFit: isEnlarged ? "contain" : objectFit,
